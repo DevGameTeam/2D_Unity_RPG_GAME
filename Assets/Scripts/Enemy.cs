@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class Enemy : MonoBehaviour
     public GameObject healthBarBackground;
     public Image healthBarFilled;
 
+    //AI
+    public AIPath aiPath;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +37,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
+        if(aiPath.desiredVelocity.x <= 0.01f)
+        {
+
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

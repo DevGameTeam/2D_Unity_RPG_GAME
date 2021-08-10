@@ -132,7 +132,7 @@ public class PlayerMove : MonoBehaviour
         rigid2D.velocity = new Vector2(hor * defaultSpeed, rigid2D.velocity.y);
 
         if (Input.GetKey(KeyCode.LeftShift)) {
-            defaultSpeed = 0.7;
+            defaultSpeed = 0.7f;
         }
         else {
             defaultSpeed = speed;
