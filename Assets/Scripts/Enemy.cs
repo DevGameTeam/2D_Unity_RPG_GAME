@@ -37,10 +37,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
-        if(aiPath.desiredVelocity.x <= 0.01f)
-        {
-
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
